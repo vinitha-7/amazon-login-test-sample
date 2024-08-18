@@ -18,11 +18,6 @@ Use the following link to download the sample project:
 ```
 https://github.com/browserstack/python-selenium-browserstack/archive/refs/heads/main.zip
 ```
-## Navigate to the project root folder/ directory
-Navigate to the project root folder/ directory using the following command:
-...
-cd python-selenium-browserstack
-...
 
 ## Open the project in a Python IDE
 Open the project in your preferred Python-based IDE (such as PyCharm).
@@ -54,6 +49,11 @@ platforms:
 browserstackLocal: true
 buildName: browserstack-build-1
 projectName: BrowserStack Sample
+```
+## Navigate to the project root folder/ directory
+Navigate to the project root folder/ directory using the following command:
+```
+cd root-folder-name
 ```
 ## Create a python virtual environment and Install dependencies
 Set up a Python virtual environment (if you haven’t already):
@@ -91,7 +91,7 @@ git checkout feature-test
 ```
 Add your updated project files to the feature branch
 ```
-git add . or git add "updated file name"
+git add . or git add updated-file-name
 ```
 
 Commit the staged project files
