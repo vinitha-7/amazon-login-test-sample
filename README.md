@@ -9,7 +9,7 @@
 
 
 ## Download the sample project
-Download or clone the sample project that integrates Selenium with BrowserStack. You can find it here: python-selenium-browserstack.
+Download or clone the sample project that integrates Selenium with BrowserStack.
 Use the following command to clone the repository:
 ```
 git clone -b main https://github.com/browserstack/python-selenium-browserstack
