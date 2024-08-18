@@ -2,7 +2,7 @@
 1. Install Python & PIP
 2. Install Python IDE
 3. Browserstack account
-4. GitHub account 
+4. GitHub account with a repository created
 
 
 # Steps to execute the test through CLI
@@ -14,17 +14,15 @@ Use the following command to clone the repository:
 ```
 git clone -b main https://github.com/browserstack/python-selenium-browserstack
 ```
-
-## Create a python virtual environment and Install dependencies
-Set up a Python virtual environment (if you haven’t already):
+Use the following link to download the sample project:
 ```
-python -m venv env
-env\Scripts\activate
+https://github.com/browserstack/python-selenium-browserstack/archive/refs/heads/main.zip
 ```
-Install the required dependencies using pip:
-```
-pip3 install -r requirements.txt
-```
+## Navigate to the project root folder/ directory
+Navigate to the project root folder/ directory using the following command:
+...
+cd python-selenium-browserstack
+...
 
 ## Open the project in a Python IDE
 Open the project in your preferred Python-based IDE (such as PyCharm).
@@ -57,7 +55,16 @@ browserstackLocal: true
 buildName: browserstack-build-1
 projectName: BrowserStack Sample
 ```
-
+## Create a python virtual environment and Install dependencies
+Set up a Python virtual environment (if you haven’t already):
+```
+python -m venv env
+env\Scripts\activate
+```
+Install the required dependencies using pip:
+```
+pip3 install -r requirements.txt
+```
 ## Execute the test
 Run your test file from the root directory of the project using the command line:
 ```
@@ -77,10 +84,14 @@ Create a local Git repository and set the default branch to main
 ```
 git init -b main
 ```
-
-Add your project files to the local Git repository
+Create a feature branch and switch to the new feature branch to make any edits
 ```
-git add .
+git branch feature-test
+git checkout feature-test
+```
+Add your updated project files to the feature branch
+```
+git add . or git add "updated file name"
 ```
 
 Commit the staged project files
@@ -92,14 +103,18 @@ Add the remote GitHub repository (replace REMOTE-URL with the actual URL)
 ```
 git remote add origin REMOTE-URL
 ```
+Use the following command to push the current branch and set the remote as upstream
+```
+git push --set-upstream origin feature-test
+```
+Note: If you are initializing and pushing the code for the first time in your new repository, you will be redirected for authentication. If authentication is successful, your changes will be pushed to your repository.
 
-Push the project files from the local Git repository to the remote GitHub repository
-```
-git push origin main
-```
+## Merge the latest changes from feature branch to main branch in remote Git repository
+Go to the Pull Requests section and create a new pull request from feature branch to main branch by comparing the changes.
+Select merge option to merge the changes to the main branch.
 
 ## Execute tests from the remote GitHub repository using GitHub Actions
-Go to the Pull Request section and find the Commit SHA ID for the latest code push.
+Take the Commit SHA ID for the latest code push from the pull requests section.
 In the Actions section, select the workflow and run it with the full Commit SHA ID.
 The workflow will be triggered on GitHub Action runners according to your configuration, and the tests will be executed in the BrowserStack Automate console.
 
